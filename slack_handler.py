@@ -32,10 +32,9 @@ class SlackHandler(logging.Handler):
         blocks.append({"type": "divider"})
 
         try:
-            print(blocks)
-            # client.chat_postMessage(channel=slack_channel,
-            #                         username=username,
-            #                         blocks=blocks)
+            client.chat_postMessage(channel=slack_channel,
+                                    username=username,
+                                    blocks=blocks)
             print("Message sent successfully")
         except SlackApiError as e:
             print(f"Got an error: {e.response['error']}")
