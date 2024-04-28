@@ -20,14 +20,6 @@ class CustomLogger(logging.Logger):
         super().error(message, *args, **kwargs)
 
 
-# Example usage:
-logger = CustomLogger('example_logger', 'slack_channel', 'username',  'token')
-logger.error('An error occurred!')
-# logger.error('An error occurred! 1')
-# logger.error('An error occurred! 2')
-
-
-
 
 
 
